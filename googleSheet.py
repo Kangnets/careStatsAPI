@@ -1,3 +1,4 @@
+import os
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
@@ -5,7 +6,8 @@ scope = [
     "https://spreadsheets.google.com/feeds",
     "https://www.googleapis.com/auth/drive"
 ]
-credentials_path = "./key/datascience-457408-a1be95d5d8c1.json"
+credentials_path = os.getenv("GOOGLE_SERVICE_ACCOUNT_KEY")
+print(credentials_path)
 credentials = ServiceAccountCredentials.from_json_keyfile_name(credentials_path, scope)
 
 client = gspread.authorize(credentials)

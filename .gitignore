@@ -1,2 +1,19 @@
-.key
-datascience-457408-a1be95d5d8c1
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.env.*
+*.env
+*.json  # 민감한 json 파일 (예: 서비스 계정 키)
+key/    # 서비스 키 저장 폴더 전체 제외
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+key/
