@@ -22,8 +22,3 @@ for idx, sheet in enumerate(spreadsheet.worksheets()):
 worksheet = spreadsheet.get_worksheet(0)
 print("\n✅ 선택된 시트:", worksheet.title)
 
-try:
-    cell_value = worksheet.acell("A1").value
-    print("📄 A1 셀 값:", cell_value)
-except gspread.exceptions.GSpreadException as e:
-    print("❌ A1 셀 값을 가져오는 데 실패했습니다:", str(e))
