@@ -68,7 +68,7 @@ def main():
 
     # 4) 버블 추가 (크기 조정)
     #    radius = sqrt(총지급건수) * factor
-    factor = 0.2 # 이전 0.5에서 축소
+    factor = 0.4 # 이전 0.5에서 축소
     for _, row in summary.iterrows():
         region = row['통계시군구명']
         count  = row['총지급건수']

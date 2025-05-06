@@ -91,7 +91,7 @@ def main():
 
     # 4) 버블 추가 (픽셀 반지름)
     # radius = sqrt(총정원) * factor
-    factor = 1.5  # 좀 더 크게 보이도록 조정
+    factor = 4.0  # 좀 더 크게 보이도록 조정
     for _, row in summary.iterrows():
         name = row['구']
         val  = row['총정원']

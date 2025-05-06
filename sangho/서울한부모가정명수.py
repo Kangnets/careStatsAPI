@@ -55,7 +55,7 @@ def geocode(regions):
 def make_map(df):
     coords = geocode(df['통계시군구명'])
     m = folium.Map(location=[36,128], zoom_start=6, width='100%', height='100%')
-    factor = 0.3
+    factor = 0.6
 
     # 1) 버블 추가
     for _, row in df.iterrows():
