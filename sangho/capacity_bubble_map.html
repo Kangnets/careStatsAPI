@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a7c201fad11b9c9cc20489b4f9f52bc9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+     <div style="
+       position: fixed;
+       bottom: 50px;
+       left: 50px;
+       width: 240px;
+       max-height: 600px;
+       overflow: auto;
+       border:2px solid grey;
+       background-color: white;
+       padding: 10px;
+       font-size:14px;
+       z-index:9999;
+     ">
+       <b>서울특별시 구별 복지시설 총정원</b><br>
+    &nbsp;강남구: 0명<br>&nbsp;강동구: 0명<br>&nbsp;강북구: 0명<br>&nbsp;강서구: 32명<br>&nbsp;관악구: 0명<br>&nbsp;광진구: 0명<br>&nbsp;구로구: 45명<br>&nbsp;금천구: 0명<br>&nbsp;노원구: 20명<br>&nbsp;도봉구: 0명<br>&nbsp;동대문구: 0명<br>&nbsp;동작구: 0명<br>&nbsp;마포구: 30명<br>&nbsp;서대문구: 97명<br>&nbsp;서초구: 0명<br>&nbsp;성동구: 20명<br>&nbsp;성북구: 34명<br>&nbsp;송파구: 10명<br>&nbsp;양천구: 0명<br>&nbsp;영등포구: 20명<br>&nbsp;용산구: 40명<br>&nbsp;은평구: 5명<br>&nbsp;종로구: 5명<br>&nbsp;중구: 0명<br>&nbsp;중랑구: 0명<br></div>
+    
+            <div class="folium-map" id="map_a7c201fad11b9c9cc20489b4f9f52bc9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a7c201fad11b9c9cc20489b4f9f52bc9 = L.map(
+                "map_a7c201fad11b9c9cc20489b4f9f52bc9",
+                {
+                    center: [36.0, 128.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_513aceea2307dda8be47e49a85e1a6f4 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_513aceea2307dda8be47e49a85e1a6f4.addTo(map_a7c201fad11b9c9cc20489b4f9f52bc9);
+        
+    
+            var circle_marker_b1d44e14da94886e2a3c7d0dd5e8074a = L.circleMarker(
+                [37.5509, 126.8497],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.627416997969522, "stroke": true, "weight": 3}
+            ).addTo(map_a7c201fad11b9c9cc20489b4f9f52bc9);
+        
+    
+        var popup_59c8d7352c8db9ac8a7a135f1a5d96fc = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_36b9deb349b47b30391100a43e2a3769 = $(`<div id="html_36b9deb349b47b30391100a43e2a3769" style="width: 100.0%; height: 100.0%;"><b>강서구</b><br>총정원: 32명</div>`)[0];
+                popup_59c8d7352c8db9ac8a7a135f1a5d96fc.setContent(html_36b9deb349b47b30391100a43e2a3769);
+            
+        
+
+        circle_marker_b1d44e14da94886e2a3c7d0dd5e8074a.bindPopup(popup_59c8d7352c8db9ac8a7a135f1a5d96fc)
+        ;
+
+        
+    
+    
+            var circle_marker_785bf6bfc88061a7fcd1ddec48101a6a = L.circleMarker(
+                [37.4951999, 126.8877],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.832815729997478, "stroke": true, "weight": 3}
+            ).addTo(map_a7c201fad11b9c9cc20489b4f9f52bc9);
+        
+    
+        var popup_c4e3aa0a72a60f039a3aad92648dbd81 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1accd208c9af38c40f4903fef61768a8 = $(`<div id="html_1accd208c9af38c40f4903fef61768a8" style="width: 100.0%; height: 100.0%;"><b>구로구</b><br>총정원: 45명</div>`)[0];
+                popup_c4e3aa0a72a60f039a3aad92648dbd81.setContent(html_1accd208c9af38c40f4903fef61768a8);
+            
+        
+
+        circle_marker_785bf6bfc88061a7fcd1ddec48101a6a.bindPopup(popup_c4e3aa0a72a60f039a3aad92648dbd81)
+        ;
+
+        
+    
+    
+            var circle_marker_51ffe2358e8cf289e6b0f4af5ff77b8e = L.circleMarker(
+                [37.654, 127.0567],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.88854381999832, "stroke": true, "weight": 3}
+            ).addTo(map_a7c201fad11b9c9cc20489b4f9f52bc9);
+        
+    
+        var popup_9fbdce555ec912cb62489c7b4951404f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3f1e0d7b1a67d16f418834d59eb3e62e = $(`<div id="html_3f1e0d7b1a67d16f418834d59eb3e62e" style="width: 100.0%; height: 100.0%;"><b>노원구</b><br>총정원: 20명</div>`)[0];
+                popup_9fbdce555ec912cb62489c7b4951404f.setContent(html_3f1e0d7b1a67d16f418834d59eb3e62e);
+            
+        
+
+        circle_marker_51ffe2358e8cf289e6b0f4af5ff77b8e.bindPopup(popup_9fbdce555ec912cb62489c7b4951404f)
+        ;
+
+        
+    
+    
+            var circle_marker_6e369cdd7f883102c77e12844b829416 = L.circleMarker(
+                [37.566571, 126.9015317],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.908902300206645, "stroke": true, "weight": 3}
+            ).addTo(map_a7c201fad11b9c9cc20489b4f9f52bc9);
+        
+    
+        var popup_93e2c5b1822acef4ff30175a1b8b28ad = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ed3f9082b4efd4fb3b880d08841b6697 = $(`<div id="html_ed3f9082b4efd4fb3b880d08841b6697" style="width: 100.0%; height: 100.0%;"><b>마포구</b><br>총정원: 30명</div>`)[0];
+                popup_93e2c5b1822acef4ff30175a1b8b28ad.setContent(html_ed3f9082b4efd4fb3b880d08841b6697);
+            
+        
+
+        circle_marker_6e369cdd7f883102c77e12844b829416.bindPopup(popup_93e2c5b1822acef4ff30175a1b8b28ad)
+        ;
+
+        
+    
+    
+            var circle_marker_9af7947dd4e5062fc25796746b1f92ff = L.circleMarker(
+                [37.5790747, 126.9367861],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 39.395431207184416, "stroke": true, "weight": 3}
+            ).addTo(map_a7c201fad11b9c9cc20489b4f9f52bc9);
+        
+    
+        var popup_6bed6d797e23fb4bc33152ad311a778e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_29cafb3f0f937ecb53d1101ff974d31f = $(`<div id="html_29cafb3f0f937ecb53d1101ff974d31f" style="width: 100.0%; height: 100.0%;"><b>서대문구</b><br>총정원: 97명</div>`)[0];
+                popup_6bed6d797e23fb4bc33152ad311a778e.setContent(html_29cafb3f0f937ecb53d1101ff974d31f);
+            
+        
+
+        circle_marker_9af7947dd4e5062fc25796746b1f92ff.bindPopup(popup_6bed6d797e23fb4bc33152ad311a778e)
+        ;
+
+        
+    
+    
+            var circle_marker_915e8be8d1d7223604c76c474dff7766 = L.circleMarker(
+                [37.5635, 127.0365],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.88854381999832, "stroke": true, "weight": 3}
+            ).addTo(map_a7c201fad11b9c9cc20489b4f9f52bc9);
+        
+    
+        var popup_dcff7c4d146fc70f5aee49194447d740 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a6c284bf6cd0b9e0e7790df3de3c6669 = $(`<div id="html_a6c284bf6cd0b9e0e7790df3de3c6669" style="width: 100.0%; height: 100.0%;"><b>성동구</b><br>총정원: 20명</div>`)[0];
+                popup_dcff7c4d146fc70f5aee49194447d740.setContent(html_a6c284bf6cd0b9e0e7790df3de3c6669);
+            
+        
+
+        circle_marker_915e8be8d1d7223604c76c474dff7766.bindPopup(popup_dcff7c4d146fc70f5aee49194447d740)
+        ;
+
+        
+    
+    
+            var circle_marker_76df35ba219e081d605d2e329d0f6f25 = L.circleMarker(
+                [37.59, 127.0165],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.323807579381203, "stroke": true, "weight": 3}
+            ).addTo(map_a7c201fad11b9c9cc20489b4f9f52bc9);
+        
+    
+        var popup_912d982f35fc7e4d27d21d69b0377cd2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3fd10dfaba5a61d26f5f1f462cb29f69 = $(`<div id="html_3fd10dfaba5a61d26f5f1f462cb29f69" style="width: 100.0%; height: 100.0%;"><b>성북구</b><br>총정원: 34명</div>`)[0];
+                popup_912d982f35fc7e4d27d21d69b0377cd2.setContent(html_3fd10dfaba5a61d26f5f1f462cb29f69);
+            
+        
+
+        circle_marker_76df35ba219e081d605d2e329d0f6f25.bindPopup(popup_912d982f35fc7e4d27d21d69b0377cd2)
+        ;
+
+        
+    
+    
+            var circle_marker_2f139128e7fc5437d96230861232995e = L.circleMarker(
+                [37.5145, 127.1058],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.649110640673518, "stroke": true, "weight": 3}
+            ).addTo(map_a7c201fad11b9c9cc20489b4f9f52bc9);
+        
+    
+        var popup_4c6d631fe4fcfc1ca164c2a2f455acb9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_19f4678918e3147f27e465cc5bc82996 = $(`<div id="html_19f4678918e3147f27e465cc5bc82996" style="width: 100.0%; height: 100.0%;"><b>송파구</b><br>총정원: 10명</div>`)[0];
+                popup_4c6d631fe4fcfc1ca164c2a2f455acb9.setContent(html_19f4678918e3147f27e465cc5bc82996);
+            
+        
+
+        circle_marker_2f139128e7fc5437d96230861232995e.bindPopup(popup_4c6d631fe4fcfc1ca164c2a2f455acb9)
+        ;
+
+        
+    
+    
+            var circle_marker_0043476f658167c9b9d7aa4cf3b70e71 = L.circleMarker(
+                [37.5262, 126.8959],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.88854381999832, "stroke": true, "weight": 3}
+            ).addTo(map_a7c201fad11b9c9cc20489b4f9f52bc9);
+        
+    
+        var popup_b0acf9220fb8df65857e5439a3489b8f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9b7ab3ff70cf354870804702ae28018e = $(`<div id="html_9b7ab3ff70cf354870804702ae28018e" style="width: 100.0%; height: 100.0%;"><b>영등포구</b><br>총정원: 20명</div>`)[0];
+                popup_b0acf9220fb8df65857e5439a3489b8f.setContent(html_9b7ab3ff70cf354870804702ae28018e);
+            
+        
+
+        circle_marker_0043476f658167c9b9d7aa4cf3b70e71.bindPopup(popup_b0acf9220fb8df65857e5439a3489b8f)
+        ;
+
+        
+    
+    
+            var circle_marker_95806350a4169b06f929891a73ebb873 = L.circleMarker(
+                [37.5323, 126.99],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25.298221281347036, "stroke": true, "weight": 3}
+            ).addTo(map_a7c201fad11b9c9cc20489b4f9f52bc9);
+        
+    
+        var popup_807751eccb81c8c2144a054a3b772f45 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_de36123c53bc87b613a48d827595609f = $(`<div id="html_de36123c53bc87b613a48d827595609f" style="width: 100.0%; height: 100.0%;"><b>용산구</b><br>총정원: 40명</div>`)[0];
+                popup_807751eccb81c8c2144a054a3b772f45.setContent(html_de36123c53bc87b613a48d827595609f);
+            
+        
+
+        circle_marker_95806350a4169b06f929891a73ebb873.bindPopup(popup_807751eccb81c8c2144a054a3b772f45)
+        ;
+
+        
+    
+    
+            var circle_marker_63220d45242edc70d0e9522c440ca176 = L.circleMarker(
+                [37.6024, 126.9293],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.94427190999916, "stroke": true, "weight": 3}
+            ).addTo(map_a7c201fad11b9c9cc20489b4f9f52bc9);
+        
+    
+        var popup_a53c5284d68e7b543d2c9390ced58f1e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3a7afa5ba13aef384443f7c1ee2867ea = $(`<div id="html_3a7afa5ba13aef384443f7c1ee2867ea" style="width: 100.0%; height: 100.0%;"><b>은평구</b><br>총정원: 5명</div>`)[0];
+                popup_a53c5284d68e7b543d2c9390ced58f1e.setContent(html_3a7afa5ba13aef384443f7c1ee2867ea);
+            
+        
+
+        circle_marker_63220d45242edc70d0e9522c440ca176.bindPopup(popup_a53c5284d68e7b543d2c9390ced58f1e)
+        ;
+
+        
+    
+    
+            var circle_marker_7f886e6c93c92b0cfaf3f4e47e98ae44 = L.circleMarker(
+                [37.5806949, 126.9827989],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.94427190999916, "stroke": true, "weight": 3}
+            ).addTo(map_a7c201fad11b9c9cc20489b4f9f52bc9);
+        
+    
+        var popup_3beaaa5cf16008d53a34dd546e418c98 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_49836f8904493340def9c724aaa07659 = $(`<div id="html_49836f8904493340def9c724aaa07659" style="width: 100.0%; height: 100.0%;"><b>종로구</b><br>총정원: 5명</div>`)[0];
+                popup_3beaaa5cf16008d53a34dd546e418c98.setContent(html_49836f8904493340def9c724aaa07659);
+            
+        
+
+        circle_marker_7f886e6c93c92b0cfaf3f4e47e98ae44.bindPopup(popup_3beaaa5cf16008d53a34dd546e418c98)
+        ;
+
+        
+    
+    
+            map_a7c201fad11b9c9cc20489b4f9f52bc9.fitBounds(
+                [[37.5177, 127.0473], [37.53, 127.1237], [37.6395, 127.0255], [37.5509, 126.8497], [37.4782, 126.9518], [37.5384, 127.0828], [37.4951999, 126.8877], [37.4565, 126.8954], [37.654, 127.0567], [37.6686, 127.0466], [37.5741982, 127.0395092], [37.5120999, 126.9395], [37.566571, 126.9015317], [37.5790747, 126.9367861], [37.4835, 127.0322], [37.5635, 127.0365], [37.59, 127.0165], [37.5145, 127.1058], [37.5171, 126.8663], [37.5262, 126.8959], [37.5323, 126.99], [37.6024, 126.9293], [37.5806949, 126.9827989], [37.5636559, 126.9975097], [37.6063, 127.093]],
+                {}
+            );
+        
+</script>
+</html>

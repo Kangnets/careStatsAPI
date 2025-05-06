@@ -7,7 +7,7 @@ import plotly.express as px
 from geopy.geocoders import Nominatim
 import plotly.graph_objects as go
 
-# 지오코딩
+# 지오코딩 위치 찾는 함수
 geolocator = Nominatim(user_agent="geoapi")
 
 def get_coords(address):
