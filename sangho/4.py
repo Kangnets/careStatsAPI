@@ -24,7 +24,7 @@ def get_coords(address):
         return pd.Series([None, None])
         
 script_dir = os.path.dirname(os.path.abspath(__file__))
-key_path = os.path.join(script_dir, "../datascience-457408-eb15d8611be3.json")
+key_path = os.path.join(script_dir, "../key/datascience-457408-eb15d8611be3.json")
 if not os.path.exists(key_path):
     raise FileNotFoundError(f"키 파일을 찾을 수 없습니다: {key_path}")
 creds = ServiceAccountCredentials.from_json_keyfile_name(key_path, scopes=[
